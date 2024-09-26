@@ -1,0 +1,17 @@
+FROM python:3.10-slim
+
+WORKDIR /mlflow
+
+# install mlflow
+COPY requirements.txt /
+RUN pip install --no-cache-dir -r /requirements.txt
+
+# setup env and fix gunicorn port bindings 
+ENV BACKEND_URI=sqlite:///mlflow.db
+ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0"
+
+# expose port
+EXPOSE 5000 
+
+# run mlflow server
+CMD mlflow server --host 0.0.0.0 --backend-store-uri $BACKEND_URI 

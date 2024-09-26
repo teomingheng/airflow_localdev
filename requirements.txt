@@ -1,2 +1,4 @@
 polars==1.8.1
 requests==2.32.3
+mlflow==2.16.2
+psycopg2-binary==2.9.9
