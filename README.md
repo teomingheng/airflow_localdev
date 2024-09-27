@@ -60,3 +60,14 @@ Managed in `.env` file
 
 
 ![alt text](img/airflow_img1.png)
+
+
+# MLFlow Server
+
+Used for MLOps. Log data science and AI experiments, track performance.
+
+Added to `docker-compose`, 
+<br>Access locally at http://localhost:5000
+<br>ML experiment sample in `/mlflow/expt`
+
+![alt text](img/mlflow_img1.png)
