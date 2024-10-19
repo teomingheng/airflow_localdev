@@ -58,6 +58,11 @@ Managed in `.env` file
   ### 4.2 `sampleAPIcall.py`
   API call to external data source, transform and load into database
 
+  ### 4.3 `samplePysparkJob.py`
+  - Sample data from `https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2023-financial-year-provisional/Download-data/annual-enterprise-survey-2023-financial-year-provisional-size-bands.csv`
+  - Pyspark job to load csv file from source dir, convert to parquet and save to target dir
+  - Updated Dockerfile to install Java, and Spark depedencies
+  
 
 ![alt text](img/airflow_img1.png)
 
@@ -71,3 +76,9 @@ Added to `docker-compose`,
 <br>ML experiment sample in `/mlflow/expt`
 
 ![alt text](img/mlflow_img1.png)
+
+
+# Pyspark
+sample data set
+https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2023-financial-year-provisional/Download-data/annual-enterprise-survey-2023-financial-year-provisional-size-bands.csv
+
